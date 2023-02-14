@@ -69,11 +69,7 @@ h6 {
   background: transparent;
   color: var(--primaryColor);
 }
-.loading {
-  text-transform: capitalize;
-  text-align: center;
-  margin-top: 3rem;
-}
+
 .error {
   text-align: center;
   text-transform: uppercase;
