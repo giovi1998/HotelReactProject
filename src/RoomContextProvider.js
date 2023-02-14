@@ -17,6 +17,7 @@ const featuredRooms = (rooms) =>{
   return rooms.filter(room => room.featured === true);
 };
 
+
 export const RoomContextProvider = ({ children }) => {
   const [itemsRooms, setRooms] = useState({
     rooms: rooms(roomsFromData),
@@ -25,10 +26,16 @@ export const RoomContextProvider = ({ children }) => {
     loading:false
   }
   );
+
+  const getRoom = (slug) =>{
+    let tempRooms =itemsRooms.rooms;
+    const room =tempRooms.find(room =>room.slug===slug);
+    return room;
+  }
   
 
   return (
-    <RoomContext.Provider value={ itemsRooms }>
+    <RoomContext.Provider value={ {...itemsRooms , getRoom }}>
       {children}
     </RoomContext.Provider>
   );

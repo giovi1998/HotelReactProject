@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/rooms/" element={<Rooms />} />
-          <Route path="/singleroom/:id" element={<SingleRoom />} />
+          <Route path="/singleroom/:slug" element={<SingleRoom />} />
           <Route path="/*" element={<ErrorPage />} />          
         </Routes>
     </Router>
