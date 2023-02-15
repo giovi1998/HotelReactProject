@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import "../styles/Room.css";
 const Room = ({room}) => {
     const {name,slug,images,price} = room; //descructure
+    console.log(room);
   return (
     <article className='room'>
       <div className='img-container'>
